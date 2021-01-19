@@ -1,0 +1,23 @@
+sudo rsync --update -rzavvP /mnt/e/CFLA-LSU-Station1/LSUCollections/ /mnt/z/LSUCollectionsWS1/ &> /mnt/c/Users/image/Desktop/rsync10.out
+
+
+sudo rsync --update -rzavvP /mnt/e/CFLA-LSU-Station1/LSUCollections/Bryophyte/ /mnt/cflabkup/LSUCollectionsWS1/Bryophyte/ &> /mnt/c/Users/image/Desktop/rsyncbryophyte1.out
+
+
+sudo rsync --update -rzavvP /mnt/e/CFLA-LSU-Station1/LSUCollections/Fungi/ /mnt/cflabkup/LSUCollectionsWS1/Fungi/ &> /mnt/c/Users/image/Desktop/rsyncfungi1.out
+
+
+sudo rsync --update -rzavvP /mnt/e/CFLA-LSU-Station1/LSUCollections/Lichen/ /mnt/cflabkup/LSUCollectionsWS1/Lichen/ &> /mnt/c/Users/image/Desktop/rsynclichen1.out
+
+
+sudo rsync --update -rzavvP /mnt/e/CFLA-LSU-Station1/LSUCollections/NoPortal/ /mnt/cflabkup/LSUCollectionsWS1/NoPortal/ &> /mnt/c/Users/image/Desktop/rsyncnoportal1.out
+
+
+sudo rsync --update -rzavvP /mnt/e/CFLA-LSU-Station1/LSUCollections/Vascular/ /mnt/cflabkup/LSUCollectionsWS1/Vascular/ &> /mnt/c/Users/image/Desktop/rsyncvasculara1.out
+
+
+http://130.39.124.15:5000/
+
+
+
+sudo rsync --update -rzavvP /mnt/e/CFLA-LSU-Station1/LSUCollections/Vascular/ /mnt/cflabkup/LSUCollectionsWS1/Vascular/ &> /mnt/c/Users/image/Desktop/rsyncvasculara1.out

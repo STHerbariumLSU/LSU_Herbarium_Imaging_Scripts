@@ -1,0 +1,1 @@
+net use y: \\130.39.124.49\Collection

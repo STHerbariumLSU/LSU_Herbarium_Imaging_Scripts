@@ -1,0 +1,148 @@
+Wed Jan  6 21:00:00 CST 2021
+[]
+[]
+[]
+[]
+['LSU99999998.CR2', 'LSU99999998.jpg', 'LSU99999999.CR2', 'LSU99999999.jpg']
+LSU99999998.CR2 - 2021-01-06 21:00:03.233086
+Traceback (most recent call last):
+  File "/mnt/c/Users/image/Documents/GitHub/LSU_Herbarium_Imaging_Scripts/WorkflowScripts/MoveLocalImages.py", line 408, in <module>
+    main()
+  File "/mnt/c/Users/image/Documents/GitHub/LSU_Herbarium_Imaging_Scripts/WorkflowScripts/MoveLocalImages.py", line 356, in main
+    moveFiles(sourceFolder,destinationFolder,portalFolders,otherFolders,barcodeMax,barcodeMin,outLogsuffix,errorFilePath,csvLogFilePath)
+  File "/mnt/c/Users/image/Documents/GitHub/LSU_Herbarium_Imaging_Scripts/WorkflowScripts/MoveLocalImages.py", line 194, in moveFiles
+    destinationFolderPath,destinationFilePath,barCode = newPathName(sourceFolder,FileName,sourceFilePath,destinationPortalFolder,barcodeMax,barcodeMin,errorFilePath,csvLogFilePath)
+  File "/mnt/c/Users/image/Documents/GitHub/LSU_Herbarium_Imaging_Scripts/WorkflowScripts/MoveLocalImages.py", line 117, in newPathName
+    if barcodeMax >= len(Barcode) >= barcodeMin: 
+TypeError: '>=' not supported between instances of 'str' and 'int'
+Thu Jan  7 21:00:01 CST 2021
+[]
+[]
+[]
+[]
+['LSU99999998.CR2', 'LSU99999998.jpg', 'LSU99999999.CR2', 'LSU99999999.jpg']
+LSU99999998.CR2 - 2021-01-07 21:00:03.838657
+Traceback (most recent call last):
+  File "/mnt/c/Users/image/Documents/GitHub/LSU_Herbarium_Imaging_Scripts/WorkflowScripts/MoveLocalImages.py", line 408, in <module>
+    main()
+  File "/mnt/c/Users/image/Documents/GitHub/LSU_Herbarium_Imaging_Scripts/WorkflowScripts/MoveLocalImages.py", line 356, in main
+    moveFiles(sourceFolder,destinationFolder,portalFolders,otherFolders,barcodeMax,barcodeMin,outLogsuffix,errorFilePath,csvLogFilePath)
+  File "/mnt/c/Users/image/Documents/GitHub/LSU_Herbarium_Imaging_Scripts/WorkflowScripts/MoveLocalImages.py", line 194, in moveFiles
+    destinationFolderPath,destinationFilePath,barCode = newPathName(sourceFolder,FileName,sourceFilePath,destinationPortalFolder,barcodeMax,barcodeMin,errorFilePath,csvLogFilePath)
+  File "/mnt/c/Users/image/Documents/GitHub/LSU_Herbarium_Imaging_Scripts/WorkflowScripts/MoveLocalImages.py", line 117, in newPathName
+    if barcodeMax >= len(Barcode) >= barcodeMin: 
+TypeError: '>=' not supported between instances of 'str' and 'int'
+Fri Jan  8 16:40:01 CST 2021
+['LSU99999998.CR2', 'LSU99999998.jpg', 'LSU99999999.CR2', 'LSU99999999.jpg']
+[]
+[]
+[]
+['LSU99999998.CR2', 'LSU99999998.jpg', 'LSU99999999.CR2', 'LSU99999999.jpg']
+['2021-01-08', '2', '8', '2', '2', '0', '0', '0']
+Done
+Fri Jan  8 16:47:17 CST 2021
+['LSU99999998.CR2', 'LSU99999998.JPG', 'LSU99999999.CR2', 'LSU99999999.JPG']
+[]
+[]
+[]
+[]
+['2021-01-08', '2', '4', '0', '2', '0', '0', '0']
+Done
+Fri Jan  8 21:00:01 CST 2021
+[]
+[]
+[]
+[]
+[]
+['2021-01-08', '0', '0', '0', '0', '0', '0', '0']
+no images today
+Done
+Sat Jan  9 21:00:01 CST 2021
+[]
+[]
+[]
+[]
+[]
+['2021-01-09', '0', '0', '0', '0', '0', '0', '0']
+no images today
+Done
+Sun Jan 10 21:00:01 CST 2021
+[]
+[]
+[]
+[]
+[]
+['2021-01-10', '0', '0', '0', '0', '0', '0', '0']
+no images today
+Done
+Mon Jan 11 21:00:01 CST 2021
+[]
+[]
+[]
+[]
+[]
+['2021-01-11', '0', '0', '0', '0', '0', '0', '0']
+no images today
+Done
+Tue Jan 12 21:00:01 CST 2021
+[]
+[]
+[]
+[]
+[]
+['2021-01-12', '0', '0', '0', '0', '0', '0', '0']
+no images today
+Done
+Wed Jan 13 21:00:01 CST 2021
+[]
+[]
+[]
+[]
+[]
+['2021-01-13', '0', '0', '0', '0', '0', '0', '0']
+no images today
+Done
+Thu Jan 14 21:00:01 CST 2021
+[]
+[]
+[]
+[]
+[]
+['2021-01-14', '0', '0', '0', '0', '0', '0', '0']
+no images today
+Done
+Fri Jan 15 21:00:01 CST 2021
+[]
+[]
+[]
+['LSU00093937_1.CR2', 'LSU00093937_1.JPG', 'LSU00093937_2.CR2', 'LSU00093937_2.JPG', 'LSU00093937_3.CR2', 'LSU00093937_3.JPG', 'LSU00163521_1.CR2', 'LSU00163521_1.JPG', 'LSU00163521_2.CR2', 'LSU00163521_2.JPG', 'LSU00163529.CR2', 'LSU00163529.JPG', 'LSU00163530_1.CR2', 'LSU00163530_1.JPG', 'LSU00163530_2.CR2', 'LSU00163530_2.JPG', 'LSU00163530_3.CR2', 'LSU00163530_3.JPG', 'LSU00163531_1.CR2', 'LSU00163531_1.JPG', 'LSU00163531_2.CR2', 'LSU00163531_2.JPG', 'LSU00163532_1.CR2', 'LSU00163532_1.JPG', 'LSU00163532_2.CR2', 'LSU00163532_2.JPG', 'LSU00163533_1.CR2', 'LSU00163533_1.JPG', 'LSU00163533_2.CR2', 'LSU00163533_2.JPG', 'LSU00163533_3.CR2', 'LSU00163533_3.JPG', 'LSU00163534.CR2', 'LSU00163534.JPG', 'LSU00163534_2.CR2', 'LSU00163534_2.JPG', 'LSU00163535.CR2', 'LSU00163535.JPG', 'LSU00163536_1.CR2', 'LSU00163536_1.JPG', 'LSU00163536_2.CR2', 'LSU00163536_2.JPG', 'LSU00163537_1.CR2', 'LSU00163537_1.JPG', 'LSU00163537_2.CR2', 'LSU00163537_2.JPG', 'LSU00163537_3.CR2', 'LSU00163537_3.JPG', 'LSU00163538.CR2', 'LSU00163538.JPG', 'LSU00163539.CR2', 'LSU00163539.JPG', 'LSU00163540.CR2', 'LSU00163540.JPG', 'LSU00163541_1.CR2', 'LSU00163541_1.JPG', 'LSU00163541_2.CR2', 'LSU00163541_2.JPG', 'LSU00163542_1.CR2', 'LSU00163542_1.JPG', 'LSU00163542_2.CR2', 'LSU00163542_2.JPG', 'LSU00163543.CR2', 'LSU00163543.JPG', 'LSU00163544_1.CR2', 'LSU00163544_1.JPG', 'LSU00163544_2.CR2', 'LSU00163544_2.JPG', 'LSU00163545.CR2', 'LSU00163545.JPG', 'LSU00163546_1.CR2', 'LSU00163546_1.JPG', 'LSU00163546_2.CR2', 'LSU00163546_2.JPG', 'LSU00163547_1.CR2', 'LSU00163547_1.JPG', 'LSU00163547_2.CR2', 'LSU00163547_2.JPG', 'LSU00163548_1.CR2', 'LSU00163548_1.JPG', 'LSU00163548_2.CR2', 'LSU00163548_2.JPG', 'LSU00163549_1.CR2', 'LSU00163549_1.JPG', 'LSU00163549_2.CR2', 'LSU00163549_2.JPG', 'LSU00163550_1.CR2', 'LSU00163550_1.JPG', 'LSU00163550_2.CR2', 'LSU00163550_2.JPG', 'LSU00163551_1.CR2', 'LSU00163551_1.JPG', 'LSU00163551_2.CR2', 'LSU00163551_2.JPG', 'LSU00163552_1.CR2', 'LSU00163552_1.JPG', 'LSU00163552_2.CR2', 'LSU00163552_2.JPG', 'LSU00163553.CR2', 'LSU00163553.JPG', 'LSU00163554_1.CR2', 'LSU00163554_1.JPG', 'LSU00163554_2.CR2', 'LSU00163554_2.JPG', 'LSU00163555.CR2', 'LSU00163555.JPG', 'LSU00163556_1.CR2', 'LSU00163556_1.JPG', 'LSU00163556_2.CR2', 'LSU00163556_2.JPG', 'LSU00163557.CR2', 'LSU00163557.JPG', 'LSU00163558_1.CR2', 'LSU00163558_1.JPG', 'LSU00163558_2.CR2', 'LSU00163558_2.JPG', 'LSU00163559_1.CR2', 'LSU00163559_1.JPG', 'LSU00163559_2.CR2', 'LSU00163559_2.JPG', 'LSU00163560.CR2', 'LSU00163560.JPG', 'LSU00163561.CR2', 'LSU00163561.JPG', 'LSU00163562_1.CR2', 'LSU00163562_1.JPG', 'LSU00163562_2.CR2', 'LSU00163562_2.JPG', 'LSU00163563_1.CR2', 'LSU00163563_1.JPG', 'LSU00163563_2.CR2', 'LSU00163563_2.JPG', 'LSU00163564.CR2', 'LSU00163564.JPG', 'LSU00163565_1.CR2', 'LSU00163565_1.JPG', 'LSU00163565_2.CR2', 'LSU00163565_2.JPG']
+[]
+['2021-01-15', '39', '138', '0', '0', '0', '0', '69']
+Done
+Sat Jan 16 21:00:01 CST 2021
+[]
+[]
+[]
+[]
+[]
+['2021-01-16', '0', '0', '0', '0', '0', '0', '0']
+no images today
+Done
+Sun Jan 17 21:00:01 CST 2021
+[]
+[]
+[]
+[]
+[]
+['2021-01-17', '0', '0', '0', '0', '0', '0', '0']
+no images today
+Done
+Mon Jan 18 21:00:01 CST 2021
+[]
+[]
+[]
+[]
+[]
+['2021-01-18', '0', '0', '0', '0', '0', '0', '0']
+no images today
+Done

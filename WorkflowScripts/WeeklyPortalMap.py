@@ -2,7 +2,7 @@ import os
 import glob
 import datetime
 import pandas as pd
-
+import argparse
 
 def countFiles(barcodes,files,portals,csvLogFilePath):
 
@@ -41,7 +41,7 @@ def countFiles(barcodes,files,portals,csvLogFilePath):
             csvLogFile.write("%s\n" % csvLogLine)
             csvLogFile.close()
 
-def makeCSV(logFolder,csvFolder,webPath,header,newest,oldest,csvLogFilePath,ws):
+def makeCSV(logFolder,csvFolder,webPath,header,newest,oldest,csvLogFilePath):
 
     # Get list of all log files edited on specified dates. 
     logFilesList=[]
@@ -59,12 +59,14 @@ def makeCSV(logFolder,csvFolder,webPath,header,newest,oldest,csvLogFilePath,ws):
         #print(path)
         st = os.stat(p)    
         mtime = datetime.datetime.fromtimestamp(st.st_mtime)
+        #print(p,mtime,oldest,newest)
+        #print(mtime>=oldest)
         # If mtime is greater(newer) than oldest date and smaller(older) than newest date
         if mtime >= oldest and mtime <= newest:
-            #print(p)
-            #print(mtime)
+            print(p)
             logFilesList.append(p)
-
+            
+    #print(logFilesList)
     # Set date name for csv file - today's date 
     logDate = str(datetime.date.today().strftime("%Y-%m-%d"))
 
@@ -87,7 +89,7 @@ def makeCSV(logFolder,csvFolder,webPath,header,newest,oldest,csvLogFilePath,ws):
             portal=oPath.split("/")[0]
 
             # Get path to csv file line will be written to.
-            csvPath = os.path.join(csvFolder,logDate+"_"+portal+'_'+ws+".csv")
+            csvPath = os.path.join(csvFolder,logDate+"_"+portal+".csv")
 
             # Get path to original image
             path = os.path.split(oPath)[0]
@@ -132,32 +134,57 @@ def makeCSV(logFolder,csvFolder,webPath,header,newest,oldest,csvLogFilePath,ws):
     # Write out log file of all the files that got csv'd
     countFiles(barcodes,files,portals,csvLogFilePath)
 
+def getArgs():
+    parser = argparse.ArgumentParser("Create CSV file to map images to online portal")
+    # Add arguments
+    parser.add_argument("-l", "--logFolder", help="Path to daily long form log files", required = True)
+    parser.add_argument("-c", "--csvFolder", help="Path to folder where CSV files for portal mapping will be made", required = True)
+    parser.add_argument("-w", "--webPath", help="Web address for linking images ", required = True)
+    parser.add_argument("-r", "--regular", help="Regular log of x days from today - T/F, number of days specified with nDays flag", required = True, default=True)
+    parser.add_argument("-d", "--nDays", help="Span of days from today (default=7)", required = True, default=7)
+    parser.add_argument("-n", "--newDate", help="Most recent date +1 day. ie June 3rd 2020, '2020,6,4'", required = False)
+    parser.add_argument("-o", "--oldDate", help="Oldest date for log. Exacty date ie October 18th 1988, '1988,10,18'", required = False)
+
+    # List of all arguments passed to script
+    args = parser.parse_args() 
+
+    # Assign arguments to variables 
+    logFolder = args.logFolder.strip()
+    csvFolder = args.csvFolder.strip()
+    webPath = args.webPath.strip()
+    regular = args.regular.strip()
+    nDays = int(args.nDays.strip())
+    newDate = args.newDate.split(',')
+    oldDate = args.oldDate.split(',')
+
+    # Return variable values 
+    return logFolder,csvFolder,webPath,regular,nDays,newDate,oldDate
+
 def main():
-    # Set times for the days that you want logs from
+    logFolder,csvFolder,webPath,regular,nDays,newDate,oldDate = getArgs()
+
+    # Set times for the days that you want logs from - this is the ugliest coding ever, please forgive me and suggest a better way
     # Days begin and end at midnight. 
     # Ex: Logs from June 3rd-July 10th. 
     # Ex: newest = datetime.datetime(year=2020,month=7,day=11)
     # Ex: oldest = datetime.datetime(year=2020,month=6,day=3)
-    
-    # Hash out the newest/oldest lines that you do NOT want to use
-    # Edit either the exact dates or the number of days wanted. For exact dates see example above
-    
-    # Span of days (default)
-    #newest = datetime.date.today()
-    #oldest = newest - datetime.timedelta(days=7)
+    ny = int(newDate[0])
+    nm = int(newDate[1])
+    nd = int(newDate[2])
+    oy = int(oldDate[0])
+    om = int(oldDate[1])
+    od = int(oldDate[2])
 
-    # Exact dates 
-    newest = datetime.datetime(year=2020,month=11,day=10)
-    oldest = datetime.datetime(year=2020,month=10,day=11)
-
-    # Path to daily long form log files
-    logFolder = '/mnt/e/CFLA-LSU-Station2/LSUCollections/ServerLogs/'
-    
-    # Path to folder where CSV files for portal mapping will be made
-    csvFolder='/mnt/e/CFLA-LSU-Station2/LSUCollections/PortalMaps/'
-
-    # Web address for linking images 
-    webPath = 'http://cyberfloralouisiana.com/images/LSUCollections/' 
+    if regular == 'True':
+        # Span of days (default)
+        newest = datetime.datetime.today()
+        oldest = newest - datetime.timedelta(days=nDays)
+    elif regular == 'False':
+        # Exact dates 
+        newest = datetime.datetime(year=ny,month=nm,day=nd)
+        oldest = datetime.datetime(year=oy,month=om,day=od)
+    else:
+        print('Enter exactly "True" or "False" for -r')
 
     # Header for csv file, compatable with Symbiota
 
@@ -169,10 +196,25 @@ def main():
 
     csvLogFilePath = os.path.join(csvFolder,'csvLog.csv')
 
-    workstation = 'ws2'
-
     # Call function
-    makeCSV(logFolder,csvFolder,webPath,header,newest,oldest,csvLogFilePath,workstation)
+    makeCSV(logFolder,csvFolder,webPath,header,newest,oldest,csvLogFilePath)
+    
+    print("Done")
 
 if __name__ == "__main__":
     main()
+
+
+# Notes 
+    # Exact dates 
+    #newest = datetime.datetime(year=2020,month=11,day=10)
+    #oldest = datetime.datetime(year=2020,month=10,day=4)
+
+    # Path to daily long form log files
+    #logFolder = '/mnt/Collection/LSUCollections/ServerLogs/'
+    
+    # Path to folder where CSV files for portal mapping will be made
+    #csvFolder='/mnt/Collection/LSUCollections/PortalMaps/'
+
+    # Web address for linking images 
+    #webPath = 'https://cyberfloralouisiana.com/images/LSUCollections/' 

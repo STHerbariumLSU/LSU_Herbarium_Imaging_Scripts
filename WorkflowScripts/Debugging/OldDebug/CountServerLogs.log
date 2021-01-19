@@ -714,3 +714,38 @@ Traceback (most recent call last):
   File "/mnt/c/Users/Image/Documents/GitHub/LSU_Herbarium_Imaging_Scripts/WorkflowScriptsWS2/CountServerLogs.py", line 60, in countImages
     logF = open(logFile,"r")
 FileNotFoundError: [Errno 2] No such file or directory: '/mnt/e/CFLA-LSU-Station2/LSUCollections/ServerLogs/2020-11-08_server_ws2.txt'
+Mon Nov  9 23:00:01 CST 2020
+Tue Nov 10 23:00:01 CST 2020
+No files moved today
+Thu Nov 12 23:00:01 CST 2020
+No files moved today
+Fri Nov 13 23:00:01 CST 2020
+Sat Nov 14 23:00:01 CST 2020
+No files moved today
+Sun Nov 15 23:00:01 CST 2020
+No files moved today
+Mon Nov 16 23:00:01 CST 2020
+No files moved today
+Tue Nov 17 23:01:25 CST 2020
+No files moved today
+Wed Nov 18 23:00:01 CST 2020
+Thu Nov 19 23:00:01 CST 2020
+Fri Nov 20 23:00:02 CST 2020
+No files moved today
+Sat Nov 21 23:00:01 CST 2020
+No files moved today
+Sun Nov 22 23:00:02 CST 2020
+No files moved today
+Mon Nov 23 23:00:02 CST 2020
+Tue Nov 24 23:00:02 CST 2020
+No files moved today
+Wed Nov 25 23:00:02 CST 2020
+Thu Nov 26 23:00:02 CST 2020
+No files moved today
+Fri Nov 27 23:00:02 CST 2020
+No files moved today
+Sat Nov 28 23:00:02 CST 2020
+No files moved today
+Sun Nov 29 23:00:02 CST 2020
+No files moved today
+Mon Nov 30 23:00:14 CST 2020

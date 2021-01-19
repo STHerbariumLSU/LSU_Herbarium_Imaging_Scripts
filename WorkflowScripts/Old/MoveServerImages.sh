@@ -8,25 +8,25 @@
 
 
 # Set custom extension for log file names
-suffix=_server_ws2.txt # adding "_server" to end of log file so it is differentiated from files sorted locally
+suffix=_server.txt # adding "_server" to end of log file so it is differentiated from files sorted locally
 
 # Set image source and destination folders
 # mnt is local long term storage, data is server
-source=/mnt/LSUCollections/
+source=/mnt/Collection/LSUCollections/
 destination=/data/LSUCollections/
 
 # Daily log folder on server
-logfolder=/data/LSUCollections/Logs/DailyWS2/
+logfolder=/data/LSUCollections/ServerLogs/
 
 # Temp log file used to make file lists
-outlog=/data/LSUCollections/Logs/DailyWS2/rsync2.out 
+outlog=/data/LSUCollections/ServerLogs/rsync.out 
 
 # Local folder to put long form file lists into
-wsLogs=/mnt/LSUCollections/ServerLogs/
+wsLogs=/mnt/Collection/LSUCollections/ServerLogs/
 
 # Backup portal csv files 
-csvfolder=/mnt/LSUCollections/PortalMaps/
-csvRemote=/data/LSUCollections/Logs/PortalMaps/
+csvfolder=/mnt/Collection/LSUCollections/PortalMaps/
+csvRemote=/data/LSUCollections/PortalMaps/
 
 
 # Name today's log after the date
@@ -37,7 +37,7 @@ todaylog=$logfolder$fname$suffix
 echo "starting rsync"
 date +"%T"
 
-rsync -avi -og --chown=root:adm --chmod=ug=rwx,o=r --update --exclude '*CR2' --exclude '*Log*' $source $destination | grep '^>f' | cut -d' ' -f2 > $outlog
+rsync -avi -og --chown=root:adm --chmod=ug=rwx,o=r --update --include='*/' --include '*JPG' --exclude '*' $source $destination | grep '^>f' | cut -d' ' -f2 > $outlog
 
 echo "starting file resizing"
 date +"%T"

@@ -11,14 +11,14 @@ EOS - EOS Utility - a program to connect computer to camera
 ### Programs/versions
 
 Python3 and package downloader like pip. 
-Ubuntu XXX
+Ubuntu 20.04 LTS
 Computer with Windows 10
-Local backup drives plugged into or mounted on the windows machines. 
+Local backup drives mounted on the window machine. 
 Remote server for long-term storage and serving images. 
 
 ### System Requirements 
 
-These scripts have been tested using Windows 10 and Ubuntu XXX. All scripts should work on any Linux platform. However, the automation of running scripts daily will be different. 
+These scripts have been tested using Windows 10, Ubuntu 20.04, and Python 3. All scripts should work on any Linux platform. However, the automation of running scripts daily will be different. 
 
 ## Download and edit scripts on imaging computer
 
@@ -49,71 +49,83 @@ These scripts have been tested using Windows 10 and Ubuntu XXX. All scripts shou
   - Click **Register**
   - Click **Browse** and link to `renameimage.exe`
 
-### 2. Organize and move image files script - organizeIncomingImages.py
+### 2. Setup Automated scripts 
 
-#### 2.1 Function description
+#### 2.1 Download ubuntu 
 
-Running `organizeIncomingImages.py` will do the following-
+Google a help page or ask IT. 
 
-- Each file will be checked for the appropriate barcode format and length. 
-- Files with inaccurate barcodes will be placed in a folder called `BadBarcode` in the source folder provided to the script. These file names will need to be manually edited and placed in the appropriate portal folders in the source folder. 
-- Accurate barcodes will be moved to the destination folder, which should be on an external harddrive or other backup. 
-- As files are moved to the destination/backup drive they will be filed based on their barcode and which source folder they are found in. 
+https://www.microsoft.com/en-us/p/ubuntu-2004-lts/9n6svws3rx71?activetab=pivot:overviewtab
 
-##### 2.1a Log files
 
-- Output logs based on date created, or on date modified if creation date cannot be identified, a potential on Linux machines. 
-- If the source folders have images in them, a log will be written for that day. 
-- Each log will be named based on the date with the option to add an additional string of letters or numbers. 
-- For LSU the log names will contain the date and the computer they are imaged on. `date_workstation1` 
-- Be careful when re-editing photos in DPP after the day they are taken, this may cause their log date to change on the server sync logs.
+#### 2.2 Download python and pip and packages
 
-##### 2.1b File name restrictions
+Download from website or package manager. Again google or ask IT. 
 
-- File names are expected to start with a barcode. This barcode should start with letters followed by ONLY numbers.
-- Extra notes or tags, such as numbering multiple files should come after an underscore "_" 
-  - Ex: LSU01234567.JPG or LSU01234567_1.JPG
-- All file names will be changed to all caps if they are not already. Except those files in the other/random folders
-- Folders will be created first using the letters, then using the numbers. Ex: /LSU/001/002/
-- **BadBarcode Folder** : Files with improperly formatting barcodes will be sent here. Edit file names in this folder and place in appropriate source folder so they will be uploaded properly. 
-- When barcode/filename is fixed, the file will be recorded in the log corresponding to the day the file was originally created. If you edit the file in DPP again the server logs may record the file as originating from the day you re-edited the photo. Make sure to record this in any paper logs.
-  
-#### 2.2 Download
+https://www.python.org/downloads/
+Help I used - https://linuxize.com/post/how-to-install-pip-on-ubuntu-20.04/
 
-- `https://github.com/LizEve/HerbariumRA.git`
-- Click blue button **Clone or download**
-  - Click **DownloadZIP**
+```bash
+sudo apt update 
+sudo apt install python3-pip
+```
 
-#### 2.3 Store locally
+Install python packages - os, glob, datetime, pandas, itertools, pathlib, shutil, platform, argparse, sys
+```bash
+python3 -m pip install pandas
+```
 
-- Again put this folder somewhere it is easy to find and hard to edit or move.
-    ex: LSU `C:Users\Image\Documents\GitHub\LSU_Herbarium_Imaging_Scripts`
 
-#### 2.4 Edit script 
+##### 2.3 Download github folder 
 
-- `organizeIncomingImages.py` needs to be customized to your computer 
-- Open python script in a simple text editor like NotePad, NOT Microsoft word. 
-- Scroll down to the bottom of the file under `def main():` and edit the following variables:
+Set up github desktop
+Github desktop - https://desktop.github.com/
 
-##### 2.4a Variables to customize 
+Clone/download scripts folder
+Scripts folder - https://github.com/LizEve/LSU_Herbarium_Imaging_Scripts
 
-- **sourceFolder** - Folder of images on computer `/mnt/c/Users/Image/Desktop/Imaging/`
+Edit "Run*.sh" scripts with appropriate file paths. 
+RunCountServer.sh - not yet set up to input variables - edit CountServerLogs.py directly
 
-- **destinationFolder** - Folder for long term storage `/mnt/e/CFLA-LSU-Station2/LSUCollections/`
 
-- **portalFolders** - List of folders that correspond to how you want to store your images. These will be automatically created if they don't already exist. `['Algae','Bryophyte','Fungi','Lichen''Vascular']`
+##### 2.3 Set up task scheduler 
 
-- **otherFolders** - Extra folders for one time projects. Barcodes will not be checked, and any nested folders will be moved as is. These will be automatically created if they don't already exist. `['Random']`
+XML files are in the github folder for import. Remember to change file paths to customize
 
-- **barcodeMax/Min** - Maximum and minimum length for legitimate barcode, does not count anything trailing an underscore "_" `15` `9`
+Task Scheduler Library > ImagingWorkflow
 
-- **outLogsuffix** - Log files are named by date, this is whatever string you want trailing the date. LSU log files will reference the computer they are imaged on. 
+General:
+Run whether user is logged in or not
+Run with highest privileges
+Configure for Windows 10
 
-### 2.5 Set up auto run of organizeIncomingImages.py
+Triggers:
+Daily/Weekly  
+Stop task if it runs longer than 1 hour
 
-- Use this tutorial to set up the task to run every day. 
-- `https://www.thewindowsclub.com/wake-up-computer-from-sleep-windows`
-- Ex LSU - Run at 7PM `wsl python3 /mnt/c/Users/Image/Documents/GitHub/HerbariumRA/organizeIncomingImages.py` 
+Actions:
+Start a program
+Program/script: bash.exe
+Add arguments: /mnt/c/Users/Image/Documents/GitHub/LSU_Herbarium_Imaging_Scripts/WorkflowScripts/*sh
+Start in: C:\Windows\System32
+
+Conditions:
+Wake computer to run this task 
+
+Settings:
+Allow to be run on demand
+Run as soon as possible if missed
+
+(On restart)
+Mount Collection Network Drive - C:\Users\Image\Documents\GitHub\LSU_Herbarium_Imaging_Scripts\WorkflowScripts\MountCollectionNetworkDrive.bat
+
+(Everyday)
+9PM: Move Local Images - RunMoveLocal.sh
+11PM: Run Counter Server Logs - RunCountServer.sh
+
+(Sundays)
+3 PM: Make CSV for upload - RunWeeklyPortalMap.sh
+
 
 ## Server
 

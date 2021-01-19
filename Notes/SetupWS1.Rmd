@@ -1,0 +1,19 @@
+---
+title: "SetupWS1"
+output: pdf_document
+---
+
+## Moving backup to synology
+
+Had been running for whole folder
+Now running one folder at a time
+NoPortal - rsyncnoportal1.out - done
+BadBarcode - rsyncbadbarcode1.out - done
+Bryophytes - rsyncbryophyte1.out - done 
+Fungi - rsyncfungi1.out - done
+Lichen - rsynclichen1.out - done
+Vascular - rsyncvascular1.out - 
+
+```bash
+sudo rsync -update -rzavvP /mnt/e/CFLA-LSU-Station1/LSUCollections/ /mnt/z/LSUCollectionsWS1/ &> /mnt/c/Users/image/Desktop
+```

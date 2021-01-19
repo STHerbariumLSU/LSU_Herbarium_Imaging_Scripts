@@ -1,0 +1,17 @@
+Thu Nov 12 15:56:48 CST 2020
+done
+Sun Nov 15 15:00:02 CST 2020
+Traceback (most recent call last):
+  File "/mnt/c/Users/Image/Documents/GitHub/LSU_Herbarium_Imaging_Scripts/WorkflowScriptsWS2/WeeklyPortalMap.py", line 179, in <module>
+    main()
+  File "/mnt/c/Users/Image/Documents/GitHub/LSU_Herbarium_Imaging_Scripts/WorkflowScriptsWS2/WeeklyPortalMap.py", line 174, in main
+    makeCSV(logFolder,csvFolder,webPath,header,newest,oldest,csvLogFilePath,workstation)
+  File "/mnt/c/Users/Image/Documents/GitHub/LSU_Herbarium_Imaging_Scripts/WorkflowScriptsWS2/WeeklyPortalMap.py", line 63, in makeCSV
+    if mtime >= oldest and mtime <= newest:
+TypeError: can't compare datetime.datetime to datetime.date
+Mon Nov 16 14:38:45 CST 2020
+done
+Sun Nov 22 15:00:01 CST 2020
+done
+Sun Nov 29 15:00:01 CST 2020
+done

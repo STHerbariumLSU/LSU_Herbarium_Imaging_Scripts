@@ -1,6 +1,6 @@
 # Imaging Workflow 
 
-Last update - 10.30.20
+Last update  idk
 
 https://github.com/LizEve/LSU_Herbarium_Imaging_Scripts
 

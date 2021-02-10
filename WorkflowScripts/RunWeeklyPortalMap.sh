@@ -12,11 +12,11 @@ csvFolder='/mnt/Collection/LSUCollections/PortalMaps/'
 webPath="https://cyberfloralouisiana.com/images/LSUCollections/"
 # 'True'- Regular log (default is past 7 days but can be edited with nDays flag). 
 # 'False' - input specified dates with newDate and oldDate flags
-regular='True'
+regular='False'
 nDays=7
 # Year,month,day
-oldDate='2020,11,11'
-newDate='2021,1,1'
+oldDate='2021,1,26'
+newDate='2021,2,9'
 # Path to your python script 
 python3 /mnt/c/Users/Image/Documents/GitHub/LSU_Herbarium_Imaging_Scripts/WorkflowScripts/WeeklyPortalMap.py -l $logFolder -c $csvFolder -w $webPath -r $regular -d $nDays -n $newDate -o $oldDate &>> $elog
 

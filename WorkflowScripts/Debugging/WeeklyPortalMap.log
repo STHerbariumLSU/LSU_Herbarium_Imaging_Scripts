@@ -91,3 +91,26 @@ Traceback (most recent call last):
   File "/mnt/c/Users/Image/Documents/GitHub/LSU_Herbarium_Imaging_Scripts/WorkflowScripts/WeeklyPortalMap.py", line 52, in makeCSV
     for file in os.listdir(logFolder):
 FileNotFoundError: [Errno 2] No such file or directory: '/mnt/Collection/LSUCollections/ServerLogs/'
+Sun Feb  7 15:00:02 CST 2021
+Sun Feb  7 15:00:02 CST 2021
+Traceback (most recent call last):
+  File "/mnt/c/Users/Image/Documents/GitHub/LSU_Herbarium_Imaging_Scripts/WorkflowScripts/WeeklyPortalMap.py", line 205, in <module>
+    main()
+  File "/mnt/c/Users/Image/Documents/GitHub/LSU_Herbarium_Imaging_Scripts/WorkflowScripts/WeeklyPortalMap.py", line 200, in main
+    makeCSV(logFolder,csvFolder,webPath,header,newest,oldest,csvLogFilePath)
+  File "/mnt/c/Users/Image/Documents/GitHub/LSU_Herbarium_Imaging_Scripts/WorkflowScripts/WeeklyPortalMap.py", line 52, in makeCSV
+    for file in os.listdir(logFolder):
+FileNotFoundError: [Errno 2] No such file or directory: '/mnt/Collection/LSUCollections/ServerLogs/'
+Traceback (most recent call last):
+  File "/mnt/c/Users/Image/Documents/GitHub/LSU_Herbarium_Imaging_Scripts/WorkflowScripts/WeeklyPortalMap.py", line 205, in <module>
+    main()
+  File "/mnt/c/Users/Image/Documents/GitHub/LSU_Herbarium_Imaging_Scripts/WorkflowScripts/WeeklyPortalMap.py", line 200, in main
+    makeCSV(logFolder,csvFolder,webPath,header,newest,oldest,csvLogFilePath)
+  File "/mnt/c/Users/Image/Documents/GitHub/LSU_Herbarium_Imaging_Scripts/WorkflowScripts/WeeklyPortalMap.py", line 52, in makeCSV
+    for file in os.listdir(logFolder):
+FileNotFoundError: [Errno 2] No such file or directory: '/mnt/Collection/LSUCollections/ServerLogs/'
+Fri Feb 12 13:19:20 CST 2021
+/mnt/Collection/LSUCollections/ServerLogs/2021-01-27_server.txt
+/mnt/Collection/LSUCollections/ServerLogs/2021-02-03_server.txt
+/mnt/Collection/LSUCollections/ServerLogs/2021-02-05_server.txt
+Done

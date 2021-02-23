@@ -1,6 +1,4 @@
 #!/bin/bash
-#2/12/21 edit with Genna and Jennie and Laymon...mount collections drive
-mount -a
 # Set error log for debugging
 elog=/mnt/c/Users/Image/Documents/GitHub/LSU_Herbarium_Imaging_Scripts/WorkflowScripts/Debugging/MoveLocalImages2.log
 # Write date to error log 

@@ -227,3 +227,25 @@ Traceback (most recent call last):
   File "/mnt/c/Users/Image/Documents/GitHub/LSU_Herbarium_Imaging_Scripts/WorkflowScripts/WeeklyPortalMap.py", line 52, in makeCSV
     for file in os.listdir(logFolder):
 FileNotFoundError: [Errno 2] No such file or directory: '/mnt/Collection/LSUCollections/ServerLogs/'
+Tue Mar  9 15:11:06 CST 2021
+Traceback (most recent call last):
+  File "/mnt/c/Users/Image/Documents/GitHub/LSU_Herbarium_Imaging_Scripts/WorkflowScripts/WeeklyPortalMap.py", line 205, in <module>
+    main()
+  File "/mnt/c/Users/Image/Documents/GitHub/LSU_Herbarium_Imaging_Scripts/WorkflowScripts/WeeklyPortalMap.py", line 200, in main
+    makeCSV(logFolder,csvFolder,webPath,header,newest,oldest,csvLogFilePath)
+  File "/mnt/c/Users/Image/Documents/GitHub/LSU_Herbarium_Imaging_Scripts/WorkflowScripts/WeeklyPortalMap.py", line 52, in makeCSV
+    for file in os.listdir(logFolder):
+FileNotFoundError: [Errno 2] No such file or directory: '/mnt/Collection/LSUCollections/ServerLogs/'
+Tue Mar  9 15:12:01 CST 2021
+Done
+Tue Mar  9 15:14:33 CST 2021
+Traceback (most recent call last):
+  File "/mnt/c/Users/Image/Documents/GitHub/LSU_Herbarium_Imaging_Scripts/WorkflowScripts/WeeklyPortalMap.py", line 205, in <module>
+    main()
+  File "/mnt/c/Users/Image/Documents/GitHub/LSU_Herbarium_Imaging_Scripts/WorkflowScripts/WeeklyPortalMap.py", line 200, in main
+    makeCSV(logFolder,csvFolder,webPath,header,newest,oldest,csvLogFilePath)
+  File "/mnt/c/Users/Image/Documents/GitHub/LSU_Herbarium_Imaging_Scripts/WorkflowScripts/WeeklyPortalMap.py", line 135, in makeCSV
+    countFiles(barcodes,files,portals,csvLogFilePath)
+  File "/mnt/c/Users/Image/Documents/GitHub/LSU_Herbarium_Imaging_Scripts/WorkflowScripts/WeeklyPortalMap.py", line 40, in countFiles
+    with open(csvLogFilePath,"a") as csvLogFile:
+PermissionError: [Errno 13] Permission denied: '/mnt/Collection/LSUCollections/PortalMaps/csvLog.csv'

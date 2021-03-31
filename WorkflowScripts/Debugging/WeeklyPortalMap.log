@@ -305,3 +305,53 @@ Thu Mar 25 14:27:45 CDT 2021
 /mnt/Collection/LSUCollections/ServerLogs/2021-03-15_server.txt
 /mnt/Collection/LSUCollections/ServerLogs/2021-03-16_server.txt
 Done
+Thu Mar 25 14:30:43 CDT 2021
+/mnt/Collection/LSUCollections/ServerLogs/2021-03-16_server.txt
+/mnt/Collection/LSUCollections/ServerLogs/2021-03-18_server.txt
+Traceback (most recent call last):
+  File "/mnt/c/Users/Image/Documents/GitHub/LSU_Herbarium_Imaging_Scripts/WorkflowScripts/WeeklyPortalMap.py", line 205, in <module>
+    main()
+  File "/mnt/c/Users/Image/Documents/GitHub/LSU_Herbarium_Imaging_Scripts/WorkflowScripts/WeeklyPortalMap.py", line 200, in main
+    makeCSV(logFolder,csvFolder,webPath,header,newest,oldest,csvLogFilePath)
+  File "/mnt/c/Users/Image/Documents/GitHub/LSU_Herbarium_Imaging_Scripts/WorkflowScripts/WeeklyPortalMap.py", line 123, in makeCSV
+    with open(csvPath,"a") as csvFile:
+PermissionError: [Errno 13] Permission denied: '/mnt/Collection/LSUCollections/PortalMaps/2021-03-25_Vascular.csv'
+Thu Mar 25 14:31:45 CDT 2021
+/mnt/Collection/LSUCollections/ServerLogs/2021-03-16_server.txt
+/mnt/Collection/LSUCollections/ServerLogs/2021-03-18_server.txt
+Done
+Thu Mar 25 14:32:20 CDT 2021
+/mnt/Collection/LSUCollections/ServerLogs/2021-03-16_server.txt
+/mnt/Collection/LSUCollections/ServerLogs/2021-03-18_server.txt
+Done
+Thu Mar 25 14:34:17 CDT 2021
+/mnt/Collection/LSUCollections/ServerLogs/2021-03-16_server.txt
+/mnt/Collection/LSUCollections/ServerLogs/2021-03-18_server.txt
+Traceback (most recent call last):
+  File "/mnt/c/Users/Image/Documents/GitHub/LSU_Herbarium_Imaging_Scripts/WorkflowScripts/WeeklyPortalMap.py", line 205, in <module>
+    main()
+  File "/mnt/c/Users/Image/Documents/GitHub/LSU_Herbarium_Imaging_Scripts/WorkflowScripts/WeeklyPortalMap.py", line 200, in main
+    makeCSV(logFolder,csvFolder,webPath,header,newest,oldest,csvLogFilePath)
+  File "/mnt/c/Users/Image/Documents/GitHub/LSU_Herbarium_Imaging_Scripts/WorkflowScripts/WeeklyPortalMap.py", line 135, in makeCSV
+    countFiles(barcodes,files,portals,csvLogFilePath)
+  File "/mnt/c/Users/Image/Documents/GitHub/LSU_Herbarium_Imaging_Scripts/WorkflowScripts/WeeklyPortalMap.py", line 40, in countFiles
+    with open(csvLogFilePath,"a") as csvLogFile:
+PermissionError: [Errno 13] Permission denied: '/mnt/Collection/LSUCollections/PortalMaps/csvLog.csv'
+Sun Mar 28 15:00:04 CDT 2021
+Sun Mar 28 15:00:04 CDT 2021
+Traceback (most recent call last):
+  File "/mnt/c/Users/Image/Documents/GitHub/LSU_Herbarium_Imaging_Scripts/WorkflowScripts/WeeklyPortalMap.py", line 205, in <module>
+    main()
+  File "/mnt/c/Users/Image/Documents/GitHub/LSU_Herbarium_Imaging_Scripts/WorkflowScripts/WeeklyPortalMap.py", line 200, in main
+    makeCSV(logFolder,csvFolder,webPath,header,newest,oldest,csvLogFilePath)
+  File "/mnt/c/Users/Image/Documents/GitHub/LSU_Herbarium_Imaging_Scripts/WorkflowScripts/WeeklyPortalMap.py", line 52, in makeCSV
+    for file in os.listdir(logFolder):
+FileNotFoundError: [Errno 2] No such file or directory: '/mnt/Collection/LSUCollections/ServerLogs/'
+Traceback (most recent call last):
+  File "/mnt/c/Users/Image/Documents/GitHub/LSU_Herbarium_Imaging_Scripts/WorkflowScripts/WeeklyPortalMap.py", line 205, in <module>
+    main()
+  File "/mnt/c/Users/Image/Documents/GitHub/LSU_Herbarium_Imaging_Scripts/WorkflowScripts/WeeklyPortalMap.py", line 200, in main
+    makeCSV(logFolder,csvFolder,webPath,header,newest,oldest,csvLogFilePath)
+  File "/mnt/c/Users/Image/Documents/GitHub/LSU_Herbarium_Imaging_Scripts/WorkflowScripts/WeeklyPortalMap.py", line 52, in makeCSV
+    for file in os.listdir(logFolder):
+FileNotFoundError: [Errno 2] No such file or directory: '/mnt/Collection/LSUCollections/ServerLogs/'

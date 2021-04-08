@@ -15,8 +15,8 @@ webPath="https://cyberfloralouisiana.com/images/LSUCollections/"
 regular='False'
 nDays=7
 # Year,month,day
-oldDate='2021,3,24'
-newDate='2021,3,29'
+oldDate='2021,3,28'
+newDate='2021,4,1'
 # Path to your python script 
 python3 /mnt/c/Users/Image/Documents/GitHub/LSU_Herbarium_Imaging_Scripts/WorkflowScripts/WeeklyPortalMap.py -l $logFolder -c $csvFolder -w $webPath -r $regular -d $nDays -n $newDate -o $oldDate &>> $elog
 

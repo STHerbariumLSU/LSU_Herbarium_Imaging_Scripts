@@ -433,3 +433,6 @@ Traceback (most recent call last):
   File "/mnt/c/Users/Image/Documents/GitHub/LSU_Herbarium_Imaging_Scripts/WorkflowScripts/WeeklyPortalMap.py", line 52, in makeCSV
     for file in os.listdir(logFolder):
 FileNotFoundError: [Errno 2] No such file or directory: '/mnt/Collection/LSUCollections/ServerLogs/'
+Fri May  7 11:57:01 CDT 2021
+Fri May  7 12:01:21 CDT 2021
+Fri May  7 12:01:54 CDT 2021
